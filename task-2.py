@@ -3,20 +3,19 @@ def get_cats_info(path):
     
     try:
         with open(path, encoding='utf-8') as file:
-            cats = [el.strip() for el in file.readlines()]
+            for line in file:
+                part = line.strip().split(',')
 
-            for cat in cats:
-                id, name, age = cat.split(',')
-                list_cats.append({"id": id, "name": name, "age": age})
-                
+                if len(part) == 3:
+                    cat_info = {"id": part[0], "name": part[1], "age": part[1]}
+                    list_cats.append(cat_info)
+                else:
+                    print(f'Incorect data in {line.strip()}')
+
         return list_cats
 
     except FileNotFoundError:
         print (f'File with {path} not found')
-        return []
-    
-    except ValueError:
-        print('Not accurate data')
         return []
 
 cats_info = get_cats_info("./files/cats_file.txt")
