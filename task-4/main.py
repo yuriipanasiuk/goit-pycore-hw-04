@@ -1,7 +1,7 @@
 from helpers import parse_input, add_contact, change_contact, show_phone, show_all, logger
 
 def main():
-    print("Welcome to the assistant bot!")
+    print(logger('', "Welcome to the assistant bot!"))
     contacts={}
 
     while True:
@@ -23,7 +23,7 @@ def main():
                 print(logger('', "Good bye!"))
                 break
             case _:
-                print(logger('error', 'Command is invalid'))
+                print(logger('error', 'Invalid command'))
 
 if __name__ == "__main__":
     main()
