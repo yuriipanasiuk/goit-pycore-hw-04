@@ -4,6 +4,8 @@ Thumbs.db
 
 # Sensitive information
 .env
+.venv/
+__pycache__
 
 # IDE specific files
 .idea/
