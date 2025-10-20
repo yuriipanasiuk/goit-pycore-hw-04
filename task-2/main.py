@@ -7,7 +7,7 @@ def get_cats_info(path):
                 part = line.strip().split(',')
 
                 if len(part) == 3:
-                    cat_info = {"id": part[0], "name": part[1], "age": part[1]}
+                    cat_info = {"id": part[0], "name": part[1], "age": part[2]}
                     list_cats.append(cat_info)
                 else:
                     print(f'Incorect data in {line.strip()}')

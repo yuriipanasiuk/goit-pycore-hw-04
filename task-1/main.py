@@ -7,7 +7,7 @@ def total_salary(path):
 
             for el in read_salary:
                 _, salary = el.split(',')
-                total += int(salary)
+                total += float(salary)
 
             average = total / number_of_developers
 
